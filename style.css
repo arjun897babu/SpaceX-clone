@@ -1,0 +1,267 @@
+*::after,
+*::before,
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: white;
+}
+
+
+/*styles for header*/
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  transition: all 0.4s;
+}
+
+.header-row-top {
+  padding: 2.25rem;
+  justify-content: center;
+}
+
+.navigation-items {
+  position: relative;
+}
+
+.navigation-items a,
+.navigation-shoping-list a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.82rem;
+  margin: .7rem;
+  position: relative;
+  display: none;
+}
+
+.navigation-items a::before,
+.navigation-shoping-list a::before {
+  content: ' ';
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  width: 0;
+  right: 0;
+  bottom: 0px;
+  transition: width .3s ease-in-out;
+
+}
+
+.navigation-items a:hover::before,
+.navigation-shoping-list a:hover::before {
+  width: 100%;
+  right: initial;
+  left: 0;
+}
+
+.navigation-shoping-list a {
+  position: absolute;
+  right: 5em;
+  top: 2.35em;
+}
+
+.toggle-bar {
+  border: none;
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  right: 1rem;
+  top: 2.8rem;
+  z-index: 3;
+  transition: all 0.5s ease;
+}
+
+.toggle-bar span {
+  display: block;
+  width: 16px;
+  height: 2px;
+  margin: 2px 0;
+  background: white;
+  transform-origin: center center;
+  transition: transform 0.5s ease;
+
+}
+
+.toggle-bar.active span:first-child,
+.toggle-bar.active span:nth-child(2) {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.toggle-bar.active span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.toggle-bar.active span:last-child {
+  opacity: 0;
+}
+
+.naviagtion-large-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: black;
+  z-index: 2;
+  bottom: 0;
+  width: 16rem;
+  padding-top: 5rem;
+  color: white;
+  text-align: right;
+  padding-left: 5em;
+  transform: translateX(400px);
+  transition: transform 0.6s;
+}
+
+.navigation-mobile-list {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: black;
+  z-index: 2;
+  bottom: 0;
+  width: 16rem;
+  padding-top: 5rem;
+  color: white;
+  text-align: right;
+  padding-left: 5em;
+  transform: translateX(400px);
+  transition: transform 0.6s;
+}
+
+
+/*styles for body*/
+
+.bg-img-container {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-img-container.section1 {
+  background-image: url(images/background-image1.jpg);
+}
+
+.bg-img-container.section2 {
+  background-image: url(images/baclground-image2.jpg);
+}
+
+.bg-img-container.section3 {
+  background-image: url(images/background-image3.jpg);
+}
+
+.bg-img-container.section4 {
+  background-image: url(images/background-image4.jpg);
+}
+
+.left-bottom-article {
+  height: 100vh;
+  width: 100%;
+  padding: 0 1.375rem;
+  position: relative;
+}
+
+.left-side {
+  position: absolute;
+  bottom: 16%;
+  max-width: 520px;
+  text-align: left;
+}
+
+.article-heading {
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 3rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.article-para {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  line-height: 2.375rem;
+  color: #fff;
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 500;
+}
+
+.article-button {
+  display: inline-block;
+  text-align: center;
+  min-width: 10.125rem;
+  padding: 0 .9rem;
+  border: 2px solid #fff;
+  text-decoration: none;
+  background: transparent;
+  color: #fff;
+  margin: 2em 0 0;
+  line-height: 54px;
+  position: relative;
+}
+
+.article-button::before {
+  position: absolute;
+  content: ' ';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: white;
+  transition: all 0.5s;
+  color: black;
+
+}
+
+.article-button:hover::before {
+  height: 100%;
+  top: initial;
+  bottom: 0;
+}
+
+.article-button:hover span {
+  color: black;
+  position: relative;
+}
+
+.arrow-bar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5%;
+}
+
+.arrow-bar svg {
+  fill: transparent;
+}
+
+/*styles for footer*/
+footer {
+  color: #fff;
+  text-align: center;
+  padding: 1.75rem 0;
+  background-color: black !important;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+footer p {
+  margin: 0;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  margin: 0 1.25rem;
+}
